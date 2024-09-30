@@ -1,0 +1,19 @@
+function main() {
+    addImage();
+    addText();
+}
+
+function addImage() {
+    let copter = new WebImage("https://codehs.com/uploads/575a8177e995a20a4b152a213b9403ba");
+    copter.setSize(400,500);
+    add(copter);
+}
+
+function addText() {
+    let text = new Text("hello world");
+    text.setText("HELLO WORLD");
+    text.setPosition(15, 21);
+    add(text);
+}
+
+main();
