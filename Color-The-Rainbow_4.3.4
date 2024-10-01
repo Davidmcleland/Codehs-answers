@@ -1,0 +1,22 @@
+// Declare all of your const variables here const COLOR_COUNT = 7; const COLOR_WIDTH = getWidth() / COLOR_COUNT; const COLOR_HEIGHT = getHeight();
+const COLOR_COUNT = 7;
+const COLOR_WIDTH = getWidth() / COLOR_COUNT;
+const COLOR_HEIGHT = getHeight();
+
+function main() { addRed(); addOrange(); addYellow(); addGreen(); addBlue(); addPurple(); addPink(); }
+
+function addRed() { let red = new Rectangle(COLOR_WIDTH, COLOR_HEIGHT); red.setPosition(0, 0); red.setColor("red"); add(red); }
+
+function addOrange() { let orange = new Rectangle(COLOR_WIDTH, COLOR_HEIGHT); orange.setPosition(COLOR_WIDTH, 0); orange.setColor("orange"); add(orange); }
+
+function addYellow() { let yellow = new Rectangle(COLOR_WIDTH, COLOR_HEIGHT); yellow.setPosition(2 * COLOR_WIDTH, 0); yellow.setColor("yellow"); add(yellow); }
+
+function addGreen() { let green = new Rectangle(COLOR_WIDTH, COLOR_HEIGHT); green.setPosition(3 * COLOR_WIDTH, 0); green.setColor("green"); add(green); }
+
+function addBlue() { let blue = new Rectangle(COLOR_WIDTH, COLOR_HEIGHT); blue.setPosition(4 * COLOR_WIDTH, 0); blue.setColor("blue"); add(blue); }
+
+function addPurple() { let purple = new Rectangle(COLOR_WIDTH, COLOR_HEIGHT); purple.setPosition(5 * COLOR_WIDTH, 0); purple.setColor("purple"); add(purple); }
+
+function addPink() { let pink = new Rectangle(COLOR_WIDTH, COLOR_HEIGHT); pink.setPosition(6 * COLOR_WIDTH, 0); pink.setColor("pink"); add(pink); }
+
+main();
