@@ -1,0 +1,30 @@
+const CLOCK_IMAGE = "https://codehs.com/uploads/ebf7e398375cde10b6937dcabfec3eff";
+
+function main() {
+    addClockFace();
+    addMinuteHand();
+    addHourHand();
+}
+
+function addClockFace() {
+    const clock = new WebImage(CLOCK_IMAGE);
+    clock.setSize(200, 200);
+    clock.setPosition(0, 0);
+    add(clock);
+}
+
+function addMinuteHand() {
+    let min = new Line(100,-60,100,100);
+    min.setColor("Black");
+    min.setLineWidth(3);
+    add(min);
+}
+
+function addHourHand() {
+    let min = new Line(100,100,100,190);
+    min.setColor("Black");
+    min.setLineWidth(4);
+    add(min);
+}
+
+main();
