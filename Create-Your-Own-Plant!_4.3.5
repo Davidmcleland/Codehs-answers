@@ -1,0 +1,54 @@
+const CENTER_X = getWidth()/2;
+const CENTER_Y = getHeight()/2;
+const RADIUS = 40;
+
+const screenHeight = getHeight();
+const screenWidth = getWidth();
+
+function main() {
+    drawBackground();
+    drawStem();
+    drawPetal();
+    drawFlower();
+    drawGround();
+}
+
+function drawFlower() {
+    let flower = new Circle(RADIUS);
+    flower.setPosition(200,150);
+    flower.setColor("brown");
+    add(flower);
+}
+
+function drawStem() {
+    let stem = new Rectangle(4,200)
+    stem.setPosition(200, 150);
+    stem.setColor("green");
+    add(stem);
+}
+
+function drawPetal() {
+    let petal = new Oval(30, 200);
+    petal.setPosition(200, 150);
+    petal.setColor("yellow");
+    add(petal);
+    let petal2 = new Oval(200, 30);
+    petal2.setPosition(200, 150);
+    petal2.setColor("yellow");
+    add(petal2);
+}
+
+function drawBackground() {
+    let background = new Rectangle(screenWidth, screenHeight);
+    background.setColor("#52baff");
+    add(background)
+}
+
+function drawGround() {
+    let Gound = new Oval(500, 200);
+    Gound.setPosition(200, 450);
+    Gound.setColor("#5C4033");
+    add(Gound);
+}
+
+main();
